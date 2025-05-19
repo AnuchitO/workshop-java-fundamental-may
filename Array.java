@@ -1,4 +1,4 @@
-// Array of names 3 items then print.
+
 public class Array {
     public static void main(String[] args) {
         String[] names = { "Launching", "Coffee", "Podpo" };
@@ -22,8 +22,19 @@ public class Array {
         }
 
         
-int[] numbers = { 1, 2, 3, 4, 5 };
+        int[] numbers = { 1, 2, 3, 4, 5 };
+        for (Integer xxx : numbers) {
+            System.out.println("Numbers: " + xxx);
 
+            // print even and odd numbers
+            if (xxx % 2 == 0) {
+                System.out.println("Even: " + xxx);
+            } else {
+                System.out.println("Odd: " + xxx);
+            }
+        }
+
+        
 
     }
 }
