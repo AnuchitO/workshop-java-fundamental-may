@@ -22,6 +22,7 @@ public class Main {
         Integer loanTerm = 36;
         System.out.println(loanTerm);
 
+
         // - float must add `f` at the end of the number.
         // - The precision of float is only six or seven decimal digits
         Float interestRate = 7.5f;
