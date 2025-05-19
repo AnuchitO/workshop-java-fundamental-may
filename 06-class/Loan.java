@@ -98,5 +98,17 @@ public class Loan {
                 return "applicantName: \(applicantName), loanAmount: \(loanAmount), interestRate: \(interestRate)"
             }
         }
+
+
+        inheritance example in swift Mortgage class inherits from Loan class
+
+        class Mortgage: Loan {
+            init(applicantName: String, loanAmount: Double, interestRate: Float) {
+                super.init(applicantName: applicantName, loanAmount: loanAmount, interestRate: interestRate)
+            }
+        }
+
+        
+        let mortgage = Mortgage(applicantName: "Jenny", loanAmount: 20000.0, interestRate: 8.5)
      */
 }

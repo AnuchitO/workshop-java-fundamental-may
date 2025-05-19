@@ -28,5 +28,16 @@ public class Main {
         System.out.println("Applicant Name: " + yyy.getApplicantName());
         System.out.println("Loan Amount: " + yyy.getLoanAmount());
         System.out.println("Interest Rate: " + yyy.getInterestRate());
+
+
+        Mortgage jenny = new Mortgage("Jenny", 20000.0d, 8.5f);
+		System.out.println(jenny.getInterestRate());
+        System.out.println(jenny.getLoanAmount());
+        System.out.println(jenny.getApplicantName());
+        // jenny.setLoanAmount(20000.0d);
+        // jenny.setInterestRate(8.5f);
+        // jenny.setApplicantName("Jenny");
+        System.out.println("============ZZZ=============");
+		System.out.println(jenny);
     }
 }
