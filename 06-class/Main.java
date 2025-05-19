@@ -20,10 +20,10 @@ public class Main {
         System.out.println("Interest Rate: " + xxx.getInterestRate());
 
         System.out.println("============YYY=============");
-        Loan yyy = new Loan();
-        yyy.setApplicantName("Somchai");
-        yyy.setLoanAmount(30000.0d);
-        yyy.setInterestRate(2.5f);
+        Loan yyy = new Loan("Somchai", 30000.0d, 2.5f);
+        // yyy.setApplicantName("Somchai");
+        // yyy.setLoanAmount(30000.0d);
+        // yyy.setInterestRate(2.5f);
        
         System.out.println("Applicant Name: " + yyy.getApplicantName());
         System.out.println("Loan Amount: " + yyy.getLoanAmount());
