@@ -10,7 +10,7 @@ public class LoanHandler implements HttpHandler {
         String method = exchange.getRequestMethod();
         OutputStream resp = exchange.getResponseBody();
 
-       
+        if ("GET".equals(method)) {
             String query = exchange.getRequestURI().getQuery(); 
             String path = exchange.getRequestURI().getPath();
             System.out.println("Path: " + path);
@@ -41,7 +41,12 @@ public class LoanHandler implements HttpHandler {
             exchange.getResponseHeaders().set("Content-Type", "application/json");
             exchange.sendResponseHeaders(200, response.length);
             resp.write(response);
-
+        } else {
+            String response = "Method not allowed";
+            exchange.sendResponseHeaders(405, response.length());
+            resp.write(response.getBytes());
+        }
+        // Close the response body
 
         resp.close();
     }
