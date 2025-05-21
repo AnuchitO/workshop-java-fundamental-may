@@ -3,6 +3,10 @@ public class Main {
 		String applicantName = "Laumcing";
 		double loanAmount = 10000.0d;
 		float interestRate = 7.5f;
+    //  TYPE name = Value; 
+        Loan loan = new Loan();
+        Integer loanId = 12345;
+
 
         System.out.println("Applicant Name: " + applicantName);
 		System.out.println("Loan Amount: " + loanAmount);

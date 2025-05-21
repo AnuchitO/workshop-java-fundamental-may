@@ -13,7 +13,7 @@ public abstract class BaseLoan {
 		this.interestRate = interestRate;
 	}
 
-	public abstract double calculateInterest();	
+	public abstract double calculateInterest();
 
 	public String getApplicantName() {
 		return applicantName;
