@@ -9,25 +9,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/loans")
 public class LoanController {
 
-    private final LoanRepository loanRepository;
+    private final LoanService loanService;
 
-    public LoanController(LoanRepository loanRepository) {
-        this.loanRepository = loanRepository;
+    public LoanController(LoanService loanService) {
+        this.loanService = loanService;
     }
-
-    // Add methods to handle HTTP requests, e.g., create, read, update, delete loans
-    // Example: public ResponseEntity<Loan> createLoan(Loan loan) { ... }
-    // Example: public ResponseEntity<List<Loan>> getAllLoans() { ... }
-    // Example: public ResponseEntity<Loan> getLoanById(Long id) { ... }
-
 
     @GetMapping
     public List<Loan> getAllLoans() {
-        return this.loanRepository.findAll();
+        return this.loanService.getAllLoans();
     }
 
     @GetMapping("/{loanId}")
     public Optional<Loan> getLoansByLoanId(@PathVariable String loanId) {
-        return this.loanRepository.findByLoanId(loanId);
+        return this.loanService.getLoanByLoanId(loanId);
     }
 }
