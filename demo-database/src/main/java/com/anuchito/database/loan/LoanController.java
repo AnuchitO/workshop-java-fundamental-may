@@ -1,11 +1,9 @@
 package  com.anuchito.database.loan;
 
 import java.util.List;
+import java.util.Optional;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/loans")
@@ -26,5 +24,10 @@ public class LoanController {
     @GetMapping
     public List<Loan> getAllLoans() {
         return this.loanRepository.findAll();
+    }
+
+    @GetMapping("/{loanId}")
+    public Optional<Loan> getLoansByLoanId(@PathVariable String loanId) {
+        return this.loanRepository.findByLoanId(loanId);
     }
 }
