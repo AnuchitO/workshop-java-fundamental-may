@@ -33,16 +33,10 @@ public class Loan {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public String getLoanId() {
         return loanId;
-    }
-
-    public void setLoanId(String loanId) {
-        this.loanId = loanId;
     }
 
     public String getApplicantName() {
@@ -57,9 +51,7 @@ public class Loan {
         return loanAmount;
     }
 
-    public void setLoanAmount(double loanAmount) {
-        this.loanAmount = loanAmount;
-    }
+
 
     public int getLoanTerm() {
         return loanTerm;
@@ -73,9 +65,7 @@ public class Loan {
         return status;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+
 
     public double getInterestRate() {
         return interestRate;
@@ -83,7 +73,18 @@ public class Loan {
 
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
+    } public void setStatus(String status) {
+        this.status = status;
+    } public void setLoanAmount(double loanAmount) {
+        this.loanAmount = loanAmount;
     }
+    public void setId(Long id) {
+        this.id = id;
+    }
+    public void setLoanId(String loanId) {
+        this.loanId = loanId;
+    }
+
 
     @Override
     public String toString() {
